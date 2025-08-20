@@ -1,0 +1,104 @@
+body {
+     background-image: url("../images/img2.webp");
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 40%;
+    height: 60%;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+    backdrop-filter: blur(10px); /* 🔹 blur effect */
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    background: rgba(0, 123, 255, 0.4); /* semi-transparent header */
+}
+
+.card-body {
+    padding: 2rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+form .mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+form .form-control {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    height: 50px;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+form .form-control:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+    border-color: #80bdff;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+button.btn-success {
+    background-color: rgba(40, 167, 69, 0.7);
+    border: none;
+    padding: 0.8rem;
+    font-weight: 500;
+    border-radius: 8px;
+    width: 100%;
+    color: white;
+}
+
+button.btn-success:hover {
+    background-color: rgba(33, 136, 56, 0.8);
+}
+form .mb-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* label left, input right */
+    margin-bottom: 1.5rem;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form .mb-3 label {
+    flex: 1; /* label takes 1 part */
+    text-align: left;
+    color: white;
+    font-weight: 500;
+}
+
+form .mb-3 .form-control {
+    flex: 2; /* input takes 2 parts */
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    color: white;
+}

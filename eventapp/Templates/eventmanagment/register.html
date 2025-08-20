@@ -1,0 +1,94 @@
+{% load static %}
+{% block newcss %}
+  <link rel="stylesheet" href="{% static 'css/register.css' %}">
+
+{% endblock %}
+{% block main %}
+    {% csrf_token %}
+    
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Register for Your Special Event</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        {{ form.name.label_tag }}
+                        {{ form.name }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.email.label_tag }}
+                        {{ form.email }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form.password.label_tag }}
+                        {{ form.password }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.confirm_password.label_tag }}
+                        {{ form.confirm_password }}
+                    </div>
+
+
+                    <div class="mb-3">
+                        {{ form.phone.label_tag }}
+                        {{ form.phone }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.age.label_tag }}
+                        {{ form.age }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.gender.label_tag }}
+                        {{ form.gender }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.occupation.label_tag }}
+                        {{ form.occupation }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.event_type.label_tag }}
+                        {{ form.event_type }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.event_date.label_tag }}
+                        {{ form.event_date }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.venue.label_tag }}
+                        {{ form.venue }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.guests.label_tag }}
+                        {{ form.guests }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.invitation.label_tag }}
+                        {{ form.invitation }}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.comments.label_tag }}
+                        {{ form.comments }}
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Submit Registration</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
